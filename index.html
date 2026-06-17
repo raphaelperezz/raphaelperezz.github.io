@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raphael Perez, Mechanical Engineer | Aerospace and Defense</title>
+<meta name="description" content="Raphael Perez, mechanical engineer. Design, nonlinear FEA, thermal-fluid systems, manufacturing, and test, from first-principles math to tested hardware. M.S. ME, University of Florida, GPA 4.00, Dec 2026. U.S. Citizen, clearance eligible.">
+<meta property="og:title" content="Raphael Perez, Mechanical Engineer">
+<meta property="og:description" content="From governing equations to released drawings, validated FEA, and tested parts. M.S. ME, GPA 4.00. U.S. Citizen, clearance eligible.">
+<meta property="og:image" content="assets/gasket/mises-final.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<canvas id="flow" aria-hidden="true"></canvas>
+<div class="scrim" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top"><span class="mk" aria-hidden="true">RP</span><b>Raphael Perez</b></a>
+    <button id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="files/Perez_Raphael_ME_Resume.pdf" download>Résumé ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Mechanical Engineer, M.S. 2026</span>
+    <h1>Raphael<br><span class="lit">Perez</span></h1>
+    <p class="role">Design / FEA / Thermal-Fluids / Manufacturing / Test</p>
+    <p class="pitch">I take hardware from governing equations to released drawings, validated simulation, and tested parts, and I can defend <b>every material, mesh, and geometry decision</b> with numbers, including the ones that exposed a problem. Aiming for aerospace and defense.</p>
+    <div class="chips">
+      <span class="chip go">U.S. Citizen</span>
+      <span class="chip go">Clearance Eligible</span>
+      <span class="chip">M.S. ME, University of Florida, GPA 4.00</span>
+      <span class="chip">Miami, FL, open to relocation</span>
+    </div>
+    <div class="actions">
+      <a class="btn solid" href="files/Perez_Raphael_ME_Resume.pdf" download>Download résumé <span class="arr" aria-hidden="true">↓</span></a>
+      <a class="btn ghost" href="#work">See the work <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="snap">
+  <div class="wrap">
+    <div class="cell"><span class="k">Degree</span><span class="v">M.S. ME · UF</span></div>
+    <div class="cell"><span class="k">Graduate GPA</span><span class="v lit" data-count="4.00" data-dec="2">4.00</span></div>
+    <div class="cell"><span class="k">Clearance</span><span class="v">Eligible</span></div>
+    <div class="cell"><span class="k">Available</span><span class="v">2026</span></div>
+  </div>
+</div>
+
+<section class="section" id="capabilities">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">What I do</span>
+      <h2>The full loop, from first principles to tested hardware</h2>
+      <p>I work the whole cycle, hand calculation to simulation to test, and report every result with the limitations that bound it.</p>
+    </div>
+    <div class="caps">
+      <div class="capc"><span class="n">01</span><h3>Design</h3><p>SolidWorks and Fusion 360, DFM/DFA, tolerance analysis, GD&amp;T per ASME Y14.5, BOMs, and Pugh-chart concept selection.</p></div>
+      <div class="capc"><span class="n">02</span><h3>Analyze</h3><p>Abaqus nonlinear, contact, hyperelastic, and plastic FEA, ANSYS static structural, mesh convergence, and hand calcs the FEA only confirms.</p></div>
+      <div class="capc"><span class="n">03</span><h3>Build</h3><p>Manual mill and lathe machining to 0.001 in, FDM printing, dimensional inspection, and drawing packages built to print.</p></div>
+      <div class="capc"><span class="n">04</span><h3>Test</h3><p>LabVIEW and NI DAQ functional testing, protocol development, thermal-fluid system sizing, and MATLAB numerical methods.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Selected work</span>
+      <h2>Seven projects, each with the result that actually mattered</h2>
+      <p>Skim the outcome and the headline number. Open a breakdown when you want the engineering, including what fell short.</p>
+    </div>
+
+    <!-- 01 DIGEST -->
+    <article class="proj" id="p1">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>01</b> / Senior design capstone · Thermal &amp; mechanical</div>
+          <h3>Cow Rumen Digestion Simulator</h3>
+          <p class="outcome">Digest-A-Bull is an instrumented, sealed benchtop bioreactor that recreates a cow's rumen so an agricultural lab can run repeatable anaerobic-fermentation studies. As mechanical design lead on a 10-person capstone I owned the mechanical subsystems, the heating, the mixing, and the sealed glass vessel and lid. My PID-controlled dual immersion heaters held the culture to <b>within 0.1 °C of setpoint</b> from 30 to 50 °C, and the impeller I sized stirred corn-syrup-thick fluid on speed, the two conditions a valid rumen simulation depends on.</p>
+          <div class="metric"><span class="v">±0.1<span class="u"> °C</span></span><span class="l">Steady-state temperature control via PID, across 30 to 50 °C.</span></div>
+          <div class="tags"><span class="tag">PID thermal control</span><span class="tag">Axial-flow mixing</span><span class="tag">Sealed vessel &amp; lid</span><span class="tag">Instrumentation</span><span class="tag">SolidWorks</span><span class="tag">Test protocols</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/digestv3/assembly.jpg" alt="CAD render of the complete rumen digestion simulator" loading="lazy" data-tag="Full simulator" data-cap="The complete simulator: a sealed borosilicate vessel with a motor-driven impeller and immersion heaters on an instrumented base, piped to a gas-collection bottle."><figcaption class="cap"><span>Full assembly</span><span>SolidWorks</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>Rumen-fermentation studies only give valid data if the biology is held steady: a precise temperature, an airtight anaerobic space that still vents safely, and constant mixing of thick, settling contents, all while logging temperature, pressure, methane, and pH. Earlier lab setups were ad-hoc and slow to bring to condition.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I sized the heaters from a lumped energy balance, then split the duty across two 75 W immersion rods under PID control. I sized a pitched-blade, axial-flow impeller, driven by a 12 V brushless-DC motor, to suspend solids in roughly corn-syrup-viscosity fluid, and designed a sealed borosilicate vessel and O-ring lid carrying a pressure-relief vent and ports for PT100 temperature, differential pressure, methane (MQ-4), and pH.</p>
+              <div class="eq"><div class="tex" data-tex="m\,c_p\,\dfrac{dT}{dt} = Q_{\text{heater}} - q_{\text{lid}} - q_{\text{walls}} - q_{\text{base}}"></div><small>Lumped vessel energy balance used to size the heater duty before any hardware existed.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>Immersion rods over a unit/jacket heater</b>: the legacy unit heater vaporized the fluid boundary layer; two submerged rods add heat gently and keep working if one fails.</li>
+              <li><b>Axial-flow pitched-blade impeller over radial</b>: axial flow with a draft tube suspends settling solids and mixes uniformly at high viscosity.</li>
+              <li><b>Borosilicate glass vessel over opaque</b>: scientists needed to see the contents were actually mixing; 316L stainless for the wetted internals resists constant immersion.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">±0.1 °C</span><span class="l">Setpoint hold, 30 to 50 °C (PID)</span></div>
+              <div class="stat"><span class="v">±5 rpm</span><span class="l">Mixing at 3000 cP, no slippage</span></div>
+              <div class="stat"><span class="v">4 signals</span><span class="l">Temp, pressure, methane, pH, live</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/digestv3/heater.png" alt="One of two immersion heater rods" loading="lazy" data-tag="Heating subsystem" data-cap="One of the two 75 W immersion heater rods I selected and packaged, threaded into the lid below the fluid line for gentle, even heat input."><figcaption class="cap"><span>Heating</span><span>2 × 75 W, PID</span></figcaption></figure>
+                <figure class="shot"><img src="assets/digestv3/mixing.png" alt="Axial-flow impeller and draft-tube mixing schematic" loading="lazy" data-tag="Mixing subsystem" data-cap="The mixing design I sized: a pitched-blade, axial-flow impeller with a draft tube to suspend solids and mix uniformly in high-viscosity contents."><figcaption class="cap"><span>Mixing</span><span>Axial-flow impeller</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>Heating verified against a written protocol across five setpoints; steady-state error stayed between 0.04 and 0.10 °C.</li><li>Mixing verified to hold setpoint speed within ±5 rpm in 3000 cP fluid.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>Temperature precision floored near 0.1 °C, a limit of the sensors rather than the controller; reaching 0.01 °C would need better instrumentation.</li><li>Mixing was characterized at corn-syrup viscosity; real rumen slurry would need re-characterization.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 02 GASKET -->
+    <article class="proj" id="p2">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>02</b> / Graduate FEA · Nonlinear and contact</div>
+          <h3>Engine Gasket Hyperelastic FEA</h3>
+          <p class="outcome">An engine head gasket seals by being crushed, but rubber's large-strain, nearly-incompressible behavior makes that hard to predict. Solo, I calibrated a hyperelastic model from real tension, shear, and biaxial test data (Ogden N=2, <b>R² 0.9629</b>, beating Mooney-Rivlin), ran the full nonlinear contact compression in Abaqus, and found the original section left a 2.22 mm gap with pressure spiking at the crowns, an open leak path. I reshaped the cross-section so it seals fully, gap to zero, with pressure spread evenly across the face.</p>
+          <div class="metric"><span class="v">2.22 → 0<span class="u"> mm</span></span><span class="l">Seal gap, closed by the redesign, with uniform contact pressure.</span></div>
+          <div class="tags"><span class="tag">Hyperelasticity</span><span class="tag">Frictional contact</span><span class="tag">Mesh convergence</span><span class="tag">Shape redesign</span><span class="tag">Abaqus</span><span class="tag">MATLAB</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/gasket/mises-final.jpg" alt="Abaqus von Mises contour of the optimized gasket" loading="lazy" data-tag="von Mises, redesigned gasket" data-cap="The redesigned gasket fully compressed: von Mises stress, Ogden N=2 model, CPE4RH hybrid plane-strain elements in Abaqus."><figcaption class="cap"><span>von Mises, final</span><span>Ogden N=2 · Abaqus</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>The head moves down 12.6 mm onto the rubber gasket with friction on every contact, including the gasket against itself. Rubber is nearly incompressible and strains far past the linear range, so the job is nonlinear in material, geometry, and contact at once, and the as-given shape never seals: it leaves a 2.2246 mm gap with contact pressure concentrated at the crowns.</p></div>
+            <div class="blk"><h4>Approach</h4><p>From simple-tension, planar-shear, and biaxial test data I fit Mooney-Rivlin and second-order Ogden models by least squares in MATLAB, and chose Ogden N=2 on three error measures (SSE, RMSE, R²). In Abaqus I used CPE4RH plane-strain hybrid elements (a mixed pressure-displacement formulation that avoids volumetric locking on incompressible rubber), confirmed a medium mesh by convergence, then reshaped the section: a 25 mm bulb arc, a 4 mm bulb fillet, and base fillets cut from 3.2 to 2 mm.</p>
+              <div class="eq"><div class="tex" data-tex="W = \sum_{p=1}^{2} \dfrac{\mu_p}{\alpha_p}\left(\lambda_1^{\alpha_p} + \lambda_2^{\alpha_p} + \lambda_3^{\alpha_p} - 3\right)"></div><small>Ogden N=2 strain-energy density, four constants identified from the test data.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>Ogden N=2 over Mooney-Rivlin</b>: closer fit on all three deformation modes (R² 0.9629 vs 0.9105), especially the stiffening at large stretch.</li>
+              <li><b>CPE4RH hybrid over standard elements</b>: pure-displacement elements lock on near-incompressible rubber and report false stresses.</li>
+              <li><b>Reshape the section over raising preload</b>: closes the gap at the same 12.6 mm travel without adding bolt load to the joint.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">2.22 → 0 mm</span><span class="l">Seal gap closed</span></div>
+              <div class="stat"><span class="v">0.9629</span><span class="l">Ogden N=2 fit R²</span></div>
+              <div class="stat"><span class="v">0.21%</span><span class="l">Stress change, med to fine mesh</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/gasket/pressure-initial.jpg" alt="Contact pressure on the original gasket" loading="lazy" data-tag="Original: leak path" data-cap="Original section: contact pressure spikes at the crowns and a 2.22 mm gap remains, an open leak path."><figcaption class="cap"><span>Original</span><span>Pressure at crowns</span></figcaption></figure>
+                <figure class="shot"><img src="assets/gasket/pressure-final.jpg" alt="Contact pressure on the redesigned gasket" loading="lazy" data-tag="Redesigned: sealed" data-cap="Redesigned section: the gap closes and contact pressure spreads uniformly across the sealing face."><figcaption class="cap"><span>Redesigned</span><span>Uniform pressure</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>Model checked against all three independent test modes, not only the one it was fit to.</li><li>Mesh convergence quantified (0.21% from medium to fine) before trusting peak stresses.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>2D plane-strain idealization; a 3D segment would capture end effects at the corners.</li><li>No thermal or time-dependent (viscoelastic) behavior, which a hot, long-life gasket would see.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 03 DEEP DRAWING -->
+    <article class="proj" id="p3">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>03</b> / Graduate FEA · Plasticity and forming</div>
+          <h3>Deep Drawing Forming Simulation</h3>
+          <p class="outcome">Deep drawing stamps a flat sheet into a shaped part, and the force clamping the sheet sets a real tradeoff: too little and it wrinkles and springs back, too much and it thins or tears, and the press must be sized for it. Following the NUMIFORM benchmark, I built the full four-step forming simulation in Abaqus (shell elements, frictional contact, springback after the tools release) at two clamping forces. It quantified the tradeoff: the heavy binder cut springback but cost <b>5× the press force</b> (648 to 3161 N) and 11.22% wall thinning versus 2.11%.</p>
+          <div class="metric"><span class="v">5<span class="u">×</span></span><span class="l">Punch-force swing across the binder tradeoff, 648 to 3161 N.</span></div>
+          <div class="tags"><span class="tag">Elastic-plastic FEA</span><span class="tag">Springback</span><span class="tag">S4R shells</span><span class="tag">Quarter symmetry</span><span class="tag">NUMIFORM</span><span class="tag">Abaqus</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/v3/dd-mises.png" alt="Deformed steel blank with von Mises contour at maximum punch stroke" loading="lazy" data-tag="von Mises at full stroke" data-cap="The drawn blank at full 70 mm punch stroke, von Mises stress, 8.8 kN binder case (Abaqus)."><figcaption class="cap"><span>von Mises, 70 mm</span><span>Abaqus</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>A 350 by 35 by 0.78 mm steel blank is drawn 70 mm into a die. Forming runs fail two ways: contact-driven non-convergence, and results that ignore the elastic springback that sets the real part shape once the tools release. The model had to capture both, at two binder forces, following the standard NUMIFORM benchmark so the results are comparable.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I modeled the blank with S4R reduced-integration shells (a quarter of it, using two symmetry planes) and the punch, holder, and die as analytical rigid surfaces. Loading ran as four deliberate steps, seat the holder, apply binder force, drive the 70 mm stroke, then deactivate the tools for springback, so each contact state was established before the next loaded it. Plasticity used linear isotropic hardening.</p>
+              <div class="eq"><div class="tex" data-tex="\sigma = \sigma_Y + H\,\varepsilon_p, \quad \sigma_Y = 167\,\text{MPa}, \;\; H = 614.6\,\text{MPa}"></div><small>Linear isotropic hardening, with friction coefficient μ = 0.14 on the contacts.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>S4R shells over solid elements</b>: the blank is 450 times longer than it is thick, so shells capture bending and thinning at a fraction of the cost.</li>
+              <li><b>Analytical rigid tooling</b>: tool flex is negligible next to the blank's plasticity, and it removes a contact-stiffness unknown.</li>
+              <li><b>Four steps over one</b>: seating binder contact before punch travel is what stops the rigid-body modes that crash forming runs.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">11.22 / 2.11%</span><span class="l">Max thinning, 8.8 vs 1.25 kN</span></div>
+              <div class="stat"><span class="v">3161 / 648 N</span><span class="l">Peak punch force</span></div>
+              <div class="stat"><span class="v">70 mm</span><span class="l">Punch stroke, both cases</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/deepdraw/thickness.png" alt="Section thickness versus position for both binder forces" loading="lazy" data-tag="Wall thinning" data-cap="Wall thickness along the part at full stroke: the heavy binder thins the wall far more than the light one."><figcaption class="cap"><span>Thinning</span><span>Both cases</span></figcaption></figure>
+                <figure class="shot"><img src="assets/v3/dd-spring.png" alt="Blank shape after springback, heavy binder" loading="lazy" data-tag="Springback, heavy binder" data-cap="After the tools release: with the 8.8 kN binder the blank holds its formed shape, springing back only slightly from the target."><figcaption class="cap"><span>Springback</span><span>8.8 kN</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>Punch reaction cross-checked two ways, history output versus summed field reactions (647.3 vs 647.8 N).</li><li>Deformed shapes mirrored across the symmetry planes and checked for false constraint at the edges.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>Isotropic hardening misses the Bauschinger effect on the reverse bend at the die radius; kinematic hardening would sharpen springback.</li><li>No sheet anisotropy or forming-limit check, both of which matter for a real production blank.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 04 WALKER -->
+    <article class="proj" id="p4">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>04</b> / Mechanical design project</div>
+          <h3>No-Slip Walker, Fall Prevention</h3>
+          <p class="outcome">The No-Slip Walker is a smart rollator that senses a fall and locks to arrest it. I owned the structural side: the frame and locking mechanism, the stress analysis, the FMEA-driven material choice (6061-T6), and the GD&amp;T drawings. The analysis did its real job by exposing a problem, under the bounding 294.7 lbf handle load the upper frame reaches yield at a <b>factor of safety of 1.00</b>, no margin, so I flagged it as the redesign priority and the basis for a safe weight limit.</p>
+          <div class="metric"><span class="v" data-count="294.7" data-dec="1">294.7<span class="u"> lbf</span></span><span class="l">Load at which the upper frame yields, the binding limit my analysis set (hand calc matched the FEA).</span></div>
+          <div class="tags"><span class="tag">Structural FEA</span><span class="tag">ANSYS</span><span class="tag">Hand-calc cross-check</span><span class="tag">FMEA</span><span class="tag">6061-T6</span><span class="tag">GD&amp;T</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/walker/fea-upper.jpg" alt="Von Mises stress of the walker upper frame under handle loading" loading="lazy" data-tag="Upper frame, the critical member" data-cap="The upper frame under the worst-case handle load: peak stress at the handle joint reaches the 6061-T6 yield, a factor of safety of only 1.00."><figcaption class="cap"><span>Upper frame, critical</span><span>ANSYS</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>A fall happens faster than a user can react, so the walker has to detect and arrest it, which means the frame can suddenly be loaded like a structure, not a walking aid. My job was to prove the frame survives a conservative worst case, choose a material that is strong, light, and corrosion-resistant, and release manufacturable GD&amp;T drawings, while finding any member that does not have enough margin.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I ran ANSYS static structural analysis on all five load-bearing members under two bounding cases, standing (full load through the handles) and seated, then cross-checked the critical result with a hand calculation. The bounding handle case puts the user's entire weight through the handles, which is conservative on purpose, so a member that passes here is safe in normal use.</p>
+              <div class="eq"><div class="tex" data-tex="\text{FOS} = \dfrac{\sigma_{\text{yield}}}{\sigma_{vM,\max}}, \qquad \text{upper frame: } \text{FOS} = 1.00"></div><small>Factor of safety per member from the ANSYS peak von Mises stress against the 6061-T6 yield.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>6061-T6 over steel or polymer</b>: the FMEA ranked stiffness-per-weight and corrosion highest; aluminum carries the load without daily lifting weight, and machines cleanly.</li>
+              <li><b>Conservative handle load over gait loads</b>: the fall event, not normal walking, is the design driver, so I sized to it.</li>
+              <li><b>FEA plus a hand calc</b>: the closed-form check confirmed the critical number rather than trusting one contour plot.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v">5</span><span class="l">Frame members analyzed, 2 load cases</span></div>
+              <div class="stat"><span class="v warn">FOS 1.00</span><span class="l">Upper frame, no margin (flagged)</span></div>
+              <div class="stat"><span class="v">294.7 lbf</span><span class="l">Hand-calc yield load = FEA</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/walker/hero.jpg" alt="CAD render of the No-Slip Walker" loading="lazy" data-tag="No-Slip Walker" data-cap="The full walker: frame, seat, handles, and the stowed locking mechanism that engages on a detected fall (Fusion 360)."><figcaption class="cap"><span>Full walker</span><span>Fusion 360</span></figcaption></figure>
+                <figure class="shot"><img src="assets/walker/drawing.png" alt="GD&T detail drawing of a bracket" loading="lazy" data-tag="GD&amp;T drawing" data-cap="A released detail drawing per ASME Y14.5, with datums, position tolerances, and inspection callouts."><figcaption class="cap"><span>GD&amp;T drawing</span><span>ASME Y14.5</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>The four other members carry healthy margin (FOS roughly 1.7 to 19); the hand calc agreed with the FEA on the critical one.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li><b>The upper frame is not acceptable as drawn:</b> a factor of safety of 1.00 leaves no margin, so it needs a gusset or larger section, or a published weight limit, before use.</li><li>Static analysis only; a real fall is dynamic and would apply an impact factor above the static load.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 05 PUMP -->
+    <article class="proj" id="p5">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>05</b> / Fluid mechanics · pump sizing</div>
+          <h3>Centrifugal Pump and Piping System</h3>
+          <p class="outcome">A hydraulic press needed oil pumped from a tank, through fittings and a valve, at 30 to 40 GPM. I built the total-dynamic-head budget from first principles, summing the pressure, elevation, friction, fitting, and kinetic heads to <b>36.0 m (118 ft)</b>, verified both lines were laminar before choosing the friction model, and selected a stock 3 hp pump whose curve clears the duty with margin.</p>
+          <div class="metric"><span class="v" data-count="36.0" data-dec="1">36.0<span class="u"> m</span></span><span class="l">Total dynamic head the pump must supply, built from first principles.</span></div>
+          <div class="tags"><span class="tag">Fluid mechanics</span><span class="tag">Darcy-Weisbach</span><span class="tag">Head budget</span><span class="tag">Reynolds regime</span><span class="tag">Pump selection</span><span class="tag">MATLAB</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/v3/pump-system.svg" alt="Schematic of the pump and piping system from supply tank to hydraulic press" loading="lazy" data-tag="System overview" data-cap="The system I sized: supply tank, 3 hp pump, a discharge line with three elbows and a globe valve into the press at 50 psia, and a 2 in gravity return that needs no second pump."><figcaption class="cap"><span>System overview</span><span>Schematic</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>The pump can only be specified once you know the total head it must overcome, and that number is the sum of several effects, most of all the pressurized press at the outlet. Get the flow regime wrong and the friction term is wrong, and the whole selection is off.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I wrote the extended energy equation between the supply tank and the press and added every contribution: the pressure rise into the press, the elevation change, friction in the lines, the fitting losses, and the kinetic head. Before applying friction I checked the Reynolds number in both lines, found them below 4000, and used the laminar relation f = 64/Re rather than a turbulent correlation.</p>
+              <div class="eq"><div class="tex" data-tex="H_{\text{pump}} = \Delta z + \dfrac{\Delta p}{\rho g} + h_f + h_{\text{minor}} + \Delta\!\left(\dfrac{V^2}{2g}\right)"></div><small>Total dynamic head, with the laminar friction factor f = 64/Re used after the regime check.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>Laminar 64/Re over a turbulent correlation</b>: the regime check came first, so the friction head is trustworthy.</li>
+              <li><b>Size to 40 GPM at the top of the range</b>: clearing the head there guarantees flow across the whole 30 to 40 GPM duty.</li>
+              <li><b>Stock 3 hp pump over a custom unit</b>: a catalog pump meets the duty point with margin and is easy to source.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">36.0 m</span><span class="l">Total dynamic head (118 ft)</span></div>
+              <div class="stat"><span class="v">3 hp</span><span class="l">Pump selected, 36.6 m at 40 GPM</span></div>
+              <div class="stat"><span class="v">Re &lt; 4000</span><span class="l">Laminar, both lines</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/pump/tdh.png" alt="Total dynamic head budget by contribution" loading="lazy" data-tag="Head budget" data-cap="The total-dynamic-head budget by source: the pressure term dominates at 28.5 m of the 36.0 m total, and the selected pump delivers 36.6 m at 40 GPM."><figcaption class="cap"><span>Head budget</span><span>118 ft</span></figcaption></figure>
+                <figure class="shot"><img src="assets/pump/return.png" alt="Gravity flow capacity versus pipe size" loading="lazy" data-tag="Return line" data-cap="Return-line sizing: any pipe 2 in or larger feeds the duty by gravity, so no second pump is needed."><figcaption class="cap"><span>Return line</span><span>Gravity-fed</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>The selected pump was checked against the manufacturer's published head-flow curve: 36.6 m at 40 GPM clears the 36.0 m requirement.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>Steady-state only; startup transients and water hammer on valve closure are not captured.</li><li>Fitting losses use handbook K-factors, and the suction-side cavitation margin (NPSH) is the next thing to check before purchase.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 06 AIR ENGINE -->
+    <article class="proj" id="p6">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>06</b> / Manufacturing · Machining and drawings</div>
+          <h3>Air Engine, Built and Documented</h3>
+          <p class="outcome">A compressed-air piston engine, machined from raw stock and assembled to actually run, plus the slicer attachment it drives. On a manufacturing-lab team I owned the machining and the documentation. I cut the piston, block, and flywheel on manual mills and lathes, holding the running fits to <b>0.001 in</b>, the difference between an engine that runs and one that binds or leaks, authored the assembly, exploded, and detail drawings with the BOM through revisions, and inspected every critical dimension before assembly.</p>
+          <div class="metric"><span class="v">0.001<span class="u"> in</span></span><span class="l">Tolerance held on the critical running fits, on manual machines.</span></div>
+          <div class="tags"><span class="tag">Manual mill &amp; lathe</span><span class="tag">Drawing package</span><span class="tag">BOM</span><span class="tag">Dimensional inspection</span><span class="tag">SolidWorks</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/airengine/exploded.png" alt="Exploded view drawing of the air engine" loading="lazy" data-tag="Exploded view" data-cap="The exploded-view drawing I authored, with every component ballooned and keyed to the bill of materials."><figcaption class="cap"><span>Exploded view</span><span>Keyed to BOM</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>An air engine only runs if the parts truly fit: the piston has to slide in its bore without binding or leaking, the flywheel has to seat true, and every interface has to land in tolerance on a manual machine, with no CNC compensation and no spare stock. The drawings also had to be good enough for someone else to rebuild it.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I assigned tolerances by function, not by habit: the piston-bore running fit and the shaft seats carry 0.001 in because leakage and runout live there, while non-mating features carry open tolerances so machining time goes where it matters. I wrote each part's process plan, facing, turning, drilling, boring, milling, before touching stock, and fed inspection results back into drawing revisions.</p></div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>Tight only at the fits, open elsewhere</b>: tolerancing everything tightly multiplies machine time and scrap with no benefit.</li>
+              <li><b>Drill then single-point bore over drill or ream</b>: boring corrects drill wander and hits location and diameter together.</li>
+              <li><b>Revision-lettered drawings over redlines</b>: the package stays matched to the parts on the bench, the discipline production demands.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">0.001 in</span><span class="l">Critical fits, manual machines</span></div>
+              <div class="stat"><span class="v">8+</span><span class="l">Drawing sheets, through revisions</span></div>
+              <div class="stat"><span class="v">Ran</span><span class="l">On shop air, as assembled</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/airengine/assembly.png" alt="Assembly isometric drawing of the engine and slicer" loading="lazy" data-tag="Assembly drawing" data-cap="The full assembly isometric of the engine and its slicer attachment."><figcaption class="cap"><span>Assembly</span><span>Isometric</span></figcaption></figure>
+                <figure class="shot"><img src="assets/airengine/piston-block.png" alt="Piston block detail drawing" loading="lazy" data-tag="Piston block" data-cap="The piston-block detail: the bored cylinder and ported faces that set the engine's running fit."><figcaption class="cap"><span>Piston block</span><span>Detail</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>Every critical dimension measured and dispositioned before assembly; the finished engine ran on shop air.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>No surface-finish (Ra) callouts on the bore yet; specifying them would fully control the leakage path by drawing.</li><li>Inspection used hand metrology; CMM verification of the position tolerances is the production-grade follow-on.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+    <!-- 07 OPTIMAL CONTROL -->
+    <article class="proj" id="p7">
+      <div class="proj-top">
+        <div>
+          <div class="idx"><b>07</b> / Controls and numerical methods · MATLAB</div>
+          <h3>Optimal Control of Nonlinear Systems</h3>
+          <p class="outcome">Two control problems that break naive solvers, derived and coded from scratch. For a hyper-sensitive problem, whose solution grows and decays exponentially, I derived the exact answer by hand, then built an indirect multiple-shooting solver that matched it to <b>better than 4e-10</b> across six time horizons where simple single-shooting diverges. For a six-state robot arm with bounded torques, I wrote a direct optimizer that drove the minimum maneuver time from 12.14 s down to 9.63 s.</p>
+          <div class="metric"><span class="v">&lt; 4e-10</span><span class="l">Terminal-state error against the exact solution, across all six horizons.</span></div>
+          <div class="tags"><span class="tag">Pontryagin principle</span><span class="tag">Multiple shooting</span><span class="tag">Direct shooting</span><span class="tag">Constrained optimization</span><span class="tag">MATLAB</span></div>
+        </div>
+        <div class="shotwrap"><figure class="shot"><img src="assets/control/ms-x.jpg" alt="Numerical solution versus the exact solution across six time horizons" loading="lazy" data-tag="My solver vs the exact solution" data-cap="The solution over time: my numerical result (solid) lands on the exact hand-derived answer (dashed) across all six horizons, including the long ones where a simple method fails."><figcaption class="cap"><span>Solver vs exact</span><span>6 cases</span></figcaption></figure></div>
+      </div>
+      <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
+        <div class="more-in"><div class="dgrid">
+          <div>
+            <div class="blk"><h4>The problem</h4><p>Some optimal-control problems are numerically hostile: the equations that define the best trajectory grow and shrink exponentially, so a single shot from one end loses all accuracy by the other. The robot-arm problem is different, a minimum-time move of a nonlinear, six-state arm whose three motors are torque-limited, with no closed-form answer at all.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I derived the optimality conditions from the Hamiltonian by hand, including the exact closed-form solution to use as a truth reference. I then split the time horizon into short intervals and solved them together (multiple shooting), keeping every integration well conditioned. For the robot arm I parameterized the torques and minimized the maneuver time directly, enforcing the torque limits at 200 points along each control.</p>
+              <div class="eq"><div class="tex" data-tex="H = L + \lambda^{\mathsf{T}} f, \qquad \dot{\lambda} = -\dfrac{\partial H}{\partial x}, \qquad u^{*} = \arg\min_{u} H"></div><small>Pontryagin minimum principle: the state and costate boundary-value problem, solved analytically, then numerically.</small></div>
+            </div>
+            <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
+              <li><b>Multiple shooting over single shooting</b>: short, well-conditioned intervals survive the exponential growth that destroys a single shot.</li>
+              <li><b>Direct method for the robot arm</b>: it handles the torque bounds and a free final time natively, where the indirect method gets brittle.</li>
+              <li><b>An exact reference over convergence alone</b>: comparing to the closed-form answer turns "it converged" into a measured error.</li>
+            </ul></div>
+          </div>
+          <div>
+            <div class="blk"><h4>Results</h4><div class="statline">
+              <div class="stat"><span class="v lit">&lt; 4e-10</span><span class="l">Terminal error, all six horizons</span></div>
+              <div class="stat"><span class="v">10 to 1000</span><span class="l">Time horizons solved</span></div>
+              <div class="stat"><span class="v">12.14 → 9.63 s</span><span class="l">Robot-arm minimum time</span></div></div>
+              <div class="fstrip">
+                <figure class="shot"><img src="assets/control/ms-lambda.jpg" alt="The unstable internal variable recovered across six horizons" loading="lazy" data-tag="The unstable variable, recovered" data-cap="The internal variable that makes this problem blow up numerically, recovered cleanly at every time horizon."><figcaption class="cap"><span>Unstable variable</span><span>Recovered</span></figcaption></figure>
+                <figure class="shot"><img src="assets/control/robot-x1.png" alt="Robot-arm joint angle converging to the minimum-time motion" loading="lazy" data-tag="Robot-arm motion" data-cap="The robot arm's joint angle over time, converging to the fastest possible motion as the optimizer refines the torques, reaching 9.63 s."><figcaption class="cap"><span>Robot-arm motion</span><span>Minimum time</span></figcaption></figure>
+              </div></div>
+            <div class="blk"><h4>Validation and limits</h4>
+              <ul class="lst go"><li>Numerical states, controls, and costates overlaid on the exact solution; the terminal constraint held to under 4e-10.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>The direct method gives an upper bound on the true minimum time; a collocation method would certify how close 9.63 s is to optimal.</li><li>The smooth control parameterization may round off a true bang-bang optimum, which an indirect pass could confirm.</li></ul>
+            </div>
+          </div>
+        </div></div>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap"><div class="about-grid">
+    <div class="shead" style="margin:0">
+      <span class="eyebrow">About</span>
+      <h2>Hand calc, then simulation, then test</h2>
+      <p>M.S. Mechanical Engineering candidate at the University of Florida, GPA 4.00, December 2026, targeting aerospace and defense, plus automotive and any serious hardware team.</p>
+    </div>
+    <div>
+      <div class="about-copy">
+        <p>My work spans nonlinear and contact FEA in Abaqus, structural analysis in ANSYS, thermal and hydraulic system sizing, design in SolidWorks and Fusion 360 with <b>GD&amp;T per ASME Y14.5</b>, and hands-on builds, from manual machining to <b>0.001 in</b> through instrumented bench validation.</p>
+        <p>I work from hand calculation to simulation to test, name the tradeoffs behind every decision, and report results with their limitations, including the ones that flag a redesign. As a <b>U.S. Citizen and clearance eligible</b>, I am ready for cleared aerospace and defense programs.</p>
+      </div>
+      <div class="skills">
+        <div class="srow"><div class="h">Design and CAD</div><div class="b">SolidWorks, Fusion 360, DFM/DFA, tolerance analysis, BOM development, Pugh-chart selection</div></div>
+        <div class="srow"><div class="h">Analysis and FEA</div><div class="b">Abaqus (nonlinear, contact, hyperelastic, plasticity, shells), ANSYS static structural, mesh convergence, FMEA</div></div>
+        <div class="srow"><div class="h">Thermal and Fluids</div><div class="b">Lumped thermal design and PID heater sizing, pump and piping sizing, valve specification</div></div>
+        <div class="srow"><div class="h">Testing and Tools</div><div class="b">LabVIEW and NI DAQ, test-protocol development, MATLAB, Python, numerical optimization</div></div>
+        <div class="srow"><div class="h">Mfg and GD&amp;T</div><div class="b">GD&amp;T per ASME Y14.5, drawing packages, manual mill and lathe to 0.001 in, inspection, FDM printing</div></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's build something that <span class="lit">has to work</span></h2>
+    <p class="lead">If your team designs, analyzes, builds, or tests hardware, especially in aerospace or defense, I would like to talk. I finish my M.S. in December 2026 and am available for roles in 2026.</p>
+    <div class="clist">
+      <a href="mailto:raphael.perez475@gmail.com"><span class="k">Email</span><span class="v">raphael.perez475@gmail.com</span></a>
+      <a href="tel:+13057837056"><span class="k">Phone</span><span class="v">(305) 783-7056</span></a>
+      <a href="https://www.linkedin.com/in/raphael--perez/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">in/raphael--perez</span></a>
+      <div class="it"><span class="k">Work authorization</span><span class="v lit">U.S. Citizen, clearance eligible</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn solid" href="files/Perez_Raphael_ME_Resume.pdf" download>Download résumé <span class="arr" aria-hidden="true">↓</span></a>
+      <a class="btn ghost" href="files/Perez_Raphael_ME_Resume.docx" download>Word (.docx)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Raphael Perez, Mechanical Engineer</span>
+    <span><a href="#top">Back to top ↑</a></span>
+  </div>
+</footer>
+
+</main>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Figure viewer">
+  <span class="lb-count" id="lbCount"></span>
+  <button class="lb-x" aria-label="Close">ESC ✕</button>
+  <button class="lb-p" aria-label="Previous figure">←</button>
+  <div class="lb-stage"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><p class="lb-cap"></p></div>
+  <button class="lb-n" aria-label="Next figure">→</button>
+</div>
+
+<script src="assets/js/motion.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
