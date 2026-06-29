@@ -4,15 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Raphael Perez, Mechanical Engineer | Aerospace and Defense</title>
-<meta name="description" content="Raphael Perez, mechanical engineer. Design, nonlinear FEA, thermal-fluid systems, manufacturing, and test, from first-principles math to tested hardware. M.S. ME, University of Florida, GPA 4.00, Dec 2026. U.S. Citizen, clearance eligible.">
+<meta name="description" content="Raphael Perez, mechanical engineer. Mechanical design, nonlinear FEA, thermal-fluid systems, manufacturing, and test. M.S. ME, University of Florida, GPA 4.00, Dec 2026. U.S. Citizen, clearance eligible.">
 <meta property="og:title" content="Raphael Perez, Mechanical Engineer">
-<meta property="og:description" content="From governing equations to released drawings, validated FEA, and tested parts. M.S. ME, GPA 4.00. U.S. Citizen, clearance eligible.">
+<meta property="og:description" content="Mechanical design, analysis, and hands-on hardware, validated by test. M.S. ME, GPA 4.00. U.S. Citizen, clearance eligible.">
 <meta property="og:image" content="assets/gasket/mises-final.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-<link rel="stylesheet" href="style.css?v=2">
+<script>(function(){try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();</script>
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -23,6 +24,11 @@
 <header class="nav" id="nav">
   <div class="nav-in">
     <a class="brand" href="#top"><span class="mk" aria-hidden="true">RP</span><b>Raphael Perez</b></a>
+    <div class="nav-right">
+    <button id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to light mode" title="Toggle light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.5M12 19.1v2.5M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M2.4 12h2.5M19.1 12h2.5M4.5 19.5l1.8-1.8M17.7 6.3l1.8-1.8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.4A8 8 0 1 1 9.6 4a6.3 6.3 0 0 0 10.4 10.4z"/></svg>
+    </button>
     <button id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="#capabilities">Capabilities</a>
@@ -31,6 +37,7 @@
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="files/Perez_Raphael_ME_Resume.pdf" download>Résumé ↓</a>
     </nav>
+    </div>
   </div>
 </header>
 
@@ -41,7 +48,7 @@
     <span class="eyebrow">Mechanical Engineer, M.S. 2026</span>
     <h1>Raphael<br><span class="lit">Perez</span></h1>
     <p class="role">Design / FEA / Thermal-Fluids / Manufacturing / Test</p>
-    <p class="pitch">I take hardware from governing equations to released drawings, validated simulation, and tested parts, and I can defend <b>every material, mesh, and geometry decision</b> with numbers, including the ones that exposed a problem. Aiming for aerospace and defense.</p>
+    <p class="pitch">I'm a mechanical engineer who enjoys working close to the hardware, taking a design from concept through <b>analysis, build, and test</b>. I care about understanding why a design performs the way it does, and I'm motivated by problems that challenge me to grow as an engineer. Focused on aerospace and defense.</p>
     <div class="chips">
       <span class="chip go">U.S. Citizen</span>
       <span class="chip go">Clearance Eligible</span>
@@ -68,8 +75,8 @@
   <div class="wrap">
     <div class="shead">
       <span class="eyebrow">What I do</span>
-      <h2>The full loop, from first principles to tested hardware</h2>
-      <p>I work the whole cycle, hand calculation to simulation to test, and report every result with the limitations that bound it.</p>
+      <h2>The full loop, from concept to tested hardware</h2>
+      <p>I follow a design through the full cycle, from early sizing to simulation to test, and I'm candid about what each result does and does not prove.</p>
     </div>
     <div class="caps">
       <div class="capc"><span class="n">01</span><h3>Design</h3><p>SolidWorks and Fusion 360, DFM/DFA, tolerance analysis, GD&amp;T per ASME Y14.5, BOMs, and Pugh-chart concept selection.</p></div>
@@ -94,37 +101,38 @@
         <div>
           <div class="idx"><b>01</b> / Senior design capstone · Thermal &amp; mechanical</div>
           <h3>Cow Rumen Digestion Simulator</h3>
-          <p class="outcome">Digest-A-Bull is an instrumented, sealed benchtop bioreactor that recreates a cow's rumen so an agricultural lab can run repeatable anaerobic-fermentation studies. As mechanical design lead on a 10-person capstone I owned the mechanical subsystems, the heating, the mixing, and the sealed glass vessel and lid. My PID-controlled dual immersion heaters held the culture to <b>within 0.1 °C of setpoint</b> from 30 to 50 °C, and the impeller I sized stirred corn-syrup-thick fluid on speed, the two conditions a valid rumen simulation depends on.</p>
+          <p class="outcome">Digest-A-Bull is an instrumented, sealed benchtop bioreactor that recreates a cow's rumen so an agricultural lab can run repeatable anaerobic-fermentation studies. As mechanical design lead on a 10-person capstone I owned the heating, the mixing, and the sealed glass vessel and lid. PID-controlled immersion heaters held the culture to <b>within 0.1 °C of setpoint</b> from 30 to 50 °C, the impeller I sized kept corn-syrup-thick fluid turning at speed, and the enclosure passed an IPX-5 water-ingress test, the conditions a usable rumen simulation depends on.</p>
           <div class="metric"><span class="v">±0.1<span class="u"> °C</span></span><span class="l">Steady-state temperature control via PID, across 30 to 50 °C.</span></div>
-          <div class="tags"><span class="tag">PID thermal control</span><span class="tag">Axial-flow mixing</span><span class="tag">Sealed vessel &amp; lid</span><span class="tag">Instrumentation</span><span class="tag">SolidWorks</span><span class="tag">Test protocols</span></div>
+          <div class="tags"><span class="tag">PID thermal control</span><span class="tag">Axial-flow mixing</span><span class="tag">IPX-5 sealing</span><span class="tag">Energy balance</span><span class="tag">Instrumentation</span><span class="tag">SolidWorks</span></div>
         </div>
         <div class="shotwrap"><figure class="shot"><img src="assets/digestv3/assembly.jpg" alt="CAD render of the complete rumen digestion simulator" loading="lazy" data-tag="Full simulator" data-cap="The complete simulator: a sealed borosilicate vessel with a motor-driven impeller and immersion heaters on an instrumented base, piped to a gas-collection bottle."><figcaption class="cap"><span>Full assembly</span><span>SolidWorks</span></figcaption></figure></div>
       </div>
       <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
         <div class="more-in"><div class="dgrid">
           <div>
-            <div class="blk"><h4>The problem</h4><p>Rumen-fermentation studies only give valid data if the biology is held steady: a precise temperature, an airtight anaerobic space that still vents safely, and constant mixing of thick, settling contents, all while logging temperature, pressure, methane, and pH. Earlier lab setups were ad-hoc and slow to bring to condition.</p></div>
-            <div class="blk"><h4>Approach</h4><p>I sized the heaters from a lumped energy balance, then split the duty across two 75 W immersion rods under PID control. I sized a pitched-blade, axial-flow impeller, driven by a 12 V brushless-DC motor, to suspend solids in roughly corn-syrup-viscosity fluid, and designed a sealed borosilicate vessel and O-ring lid carrying a pressure-relief vent and ports for PT100 temperature, differential pressure, methane (MQ-4), and pH.</p>
-              <div class="eq"><div class="tex" data-tex="m\,c_p\,\dfrac{dT}{dt} = Q_{\text{heater}} - q_{\text{lid}} - q_{\text{walls}} - q_{\text{base}}"></div><small>Lumped vessel energy balance used to size the heater duty before any hardware existed.</small></div>
+            <div class="blk"><h4>The problem</h4><p>Rumen-fermentation studies only give valid data if the biology is held steady, and the client's needs were specific: hold temperature close to setpoint and reach it within an hour, keep thick, settling contents mixing at a set speed, and stay sealed and anaerobic while logging temperature, pressure, methane, and pH. The team selected each subsystem with Pugh-chart trade studies across competing concepts; I took the heating, the mixing, and the vessel.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I sized the heaters from a lumped energy balance: bringing the charge from 20 to 50 °C takes about 188.5 kJ, which I covered with two submerged rods totaling 150 W under PID control, while a thermal-resistance model of the lid, walls, and base set the expected heat-up time. For mixing I sized a pitched-blade, axial-flow impeller and its shaft from the Reynolds number and torque in roughly corn-syrup-viscosity fluid, driven by a 12 V motor under proportional speed control. The vessel is borosilicate glass with a sealed lid carrying a pressure-relief path and ports for a PT100 probe, differential pressure, methane (MQ-4), and pH.</p>
+              <div class="eq"><div class="tex" data-tex="m\,c_p\,\dfrac{dT}{dt} = Q_{\text{heater}} - q_{\text{lid}} - q_{\text{walls}} - q_{\text{base}}"></div><small>Lumped vessel energy balance used to size the heater duty, about 188.5 kJ to bring the charge to 50 °C, before any hardware existed.</small></div>
             </div>
             <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
-              <li><b>Immersion rods over a unit/jacket heater</b>: the legacy unit heater vaporized the fluid boundary layer; two submerged rods add heat gently and keep working if one fails.</li>
-              <li><b>Axial-flow pitched-blade impeller over radial</b>: axial flow with a draft tube suspends settling solids and mixes uniformly at high viscosity.</li>
-              <li><b>Borosilicate glass vessel over opaque</b>: scientists needed to see the contents were actually mixing; 316L stainless for the wetted internals resists constant immersion.</li>
+              <li><b>Immersion rods over a jacket or unit heater</b>: the legacy unit heater scorched the fluid boundary layer; two submerged rods add heat gently below the fluid line and keep working if one fails.</li>
+              <li><b>Pitched-blade axial impeller over radial</b>: axial flow moves thick contents top to bottom to keep solids suspended, rather than just spinning the surface.</li>
+              <li><b>Borosilicate glass with 316L wetted internals</b>: scientists needed to see the contents were actually mixing, and both materials shrug off constant immersion.</li>
             </ul></div>
           </div>
           <div>
             <div class="blk"><h4>Results</h4><div class="statline">
-              <div class="stat"><span class="v lit">±0.1 °C</span><span class="l">Setpoint hold, 30 to 50 °C (PID)</span></div>
-              <div class="stat"><span class="v">±5 rpm</span><span class="l">Mixing at 3000 cP, no slippage</span></div>
-              <div class="stat"><span class="v">4 signals</span><span class="l">Temp, pressure, methane, pH, live</span></div></div>
+              <div class="stat"><span class="v lit">±0.1 °C</span><span class="l">Steady-state hold, 30 to 50 °C</span></div>
+              <div class="stat"><span class="v">~1.5 rpm</span><span class="l">Mixing error at setpoint, 3000 cP</span></div>
+              <div class="stat"><span class="v">IPX-5</span><span class="l">Passed water-ingress test</span></div>
+              <div class="stat"><span class="v">4 signals</span><span class="l">Temp, pressure, methane, pH</span></div></div>
               <div class="fstrip">
                 <figure class="shot"><img src="assets/digestv3/heater.png" alt="One of two immersion heater rods" loading="lazy" data-tag="Heating subsystem" data-cap="One of the two 75 W immersion heater rods I selected and packaged, threaded into the lid below the fluid line for gentle, even heat input."><figcaption class="cap"><span>Heating</span><span>2 × 75 W, PID</span></figcaption></figure>
                 <figure class="shot"><img src="assets/digestv3/mixing.png" alt="Axial-flow impeller and draft-tube mixing schematic" loading="lazy" data-tag="Mixing subsystem" data-cap="The mixing design I sized: a pitched-blade, axial-flow impeller with a draft tube to suspend solids and mix uniformly in high-viscosity contents."><figcaption class="cap"><span>Mixing</span><span>Axial-flow impeller</span></figcaption></figure>
               </div></div>
             <div class="blk"><h4>Validation and limits</h4>
-              <ul class="lst go"><li>Heating verified against a written protocol across five setpoints; steady-state error stayed between 0.04 and 0.10 °C.</li><li>Mixing verified to hold setpoint speed within ±5 rpm in 3000 cP fluid.</li></ul>
-              <ul class="lst warn" style="margin-top:8px"><li>Temperature precision floored near 0.1 °C, a limit of the sensors rather than the controller; reaching 0.01 °C would need better instrumentation.</li><li>Mixing was characterized at corn-syrup viscosity; real rumen slurry would need re-characterization.</li></ul>
+              <ul class="lst go"><li>Temperature validated against a written protocol at five setpoints from 30 to 50 °C: steady-state error stayed between 0.04 and 0.10 °C, cross-checked against a separate thermometer.</li><li>Mixing held within about 1.5 rpm of setpoint at 100 and 120 rpm with under 1 rpm of spread, confirmed by tachometer; the sealed unit passed an IPX-5 water-ingress test.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>Temperature precision floored near 0.1 °C, a limit of the sensors rather than the controller; reaching 0.01 °C would need better instrumentation.</li><li>In 3000 cP fluid the motor was torque-limited and could not reach its 150 rpm top speed, holding about 142, and the methane sensor saturates at 10,000 ppm; both are the first items for a next revision.</li></ul>
             </div>
           </div>
         </div></div>
@@ -147,13 +155,14 @@
         <div class="more-in"><div class="dgrid">
           <div>
             <div class="blk"><h4>The problem</h4><p>The head moves down 12.6 mm onto the rubber gasket with friction on every contact, including the gasket against itself. Rubber is nearly incompressible and strains far past the linear range, so the job is nonlinear in material, geometry, and contact at once, and the as-given shape never seals: it leaves a 2.2246 mm gap with contact pressure concentrated at the crowns.</p></div>
-            <div class="blk"><h4>Approach</h4><p>From simple-tension, planar-shear, and biaxial test data I fit Mooney-Rivlin and second-order Ogden models by least squares in MATLAB, and chose Ogden N=2 on three error measures (SSE, RMSE, R²). In Abaqus I used CPE4RH plane-strain hybrid elements (a mixed pressure-displacement formulation that avoids volumetric locking on incompressible rubber), confirmed a medium mesh by convergence, then reshaped the section: a 25 mm bulb arc, a 4 mm bulb fillet, and base fillets cut from 3.2 to 2 mm.</p>
+            <div class="blk"><h4>Approach</h4><p>From simple-tension, planar-shear, and biaxial test data I fit Mooney-Rivlin and second-order Ogden models by least squares in MATLAB, and chose Ogden N=2 on three error measures (SSE, RMSE, R²). In Abaqus I used CPE4RH plane-strain hybrid elements (a mixed pressure-displacement formulation that avoids volumetric locking on incompressible rubber), confirmed a medium mesh by convergence, then reshaped the section: a 25 mm bulb arc, a 4 mm bulb fillet, and base fillets cut from 3.2 to 2 mm. I ran it as a static step with geometric nonlinearity on and light automatic stabilization, sized to at least 20 load increments so the contact progressed without the solve failing.</p>
               <div class="eq"><div class="tex" data-tex="W = \sum_{p=1}^{2} \dfrac{\mu_p}{\alpha_p}\left(\lambda_1^{\alpha_p} + \lambda_2^{\alpha_p} + \lambda_3^{\alpha_p} - 3\right)"></div><small>Ogden N=2 strain-energy density, four constants identified from the test data.</small></div>
             </div>
             <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
               <li><b>Ogden N=2 over Mooney-Rivlin</b>: closer fit on all three deformation modes (R² 0.9629 vs 0.9105), especially the stiffening at large stretch.</li>
               <li><b>CPE4RH hybrid over standard elements</b>: pure-displacement elements lock on near-incompressible rubber and report false stresses.</li>
               <li><b>Reshape the section over raising preload</b>: closes the gap at the same 12.6 mm travel without adding bolt load to the joint.</li>
+              <li><b>Accept about 200 N more reaction force for a full seal</b>: the larger crown pushes back harder at the same travel, a fair trade since closing the gap is the gasket's whole job.</li>
             </ul></div>
           </div>
           <div>
@@ -166,7 +175,7 @@
                 <figure class="shot"><img src="assets/gasket/pressure-final.jpg" alt="Contact pressure on the redesigned gasket" loading="lazy" data-tag="Redesigned: sealed" data-cap="Redesigned section: the gap closes and contact pressure spreads uniformly across the sealing face."><figcaption class="cap"><span>Redesigned</span><span>Uniform pressure</span></figcaption></figure>
               </div></div>
             <div class="blk"><h4>Validation and limits</h4>
-              <ul class="lst go"><li>Model checked against all three independent test modes, not only the one it was fit to.</li><li>Mesh convergence quantified (0.21% from medium to fine) before trusting peak stresses.</li></ul>
+              <ul class="lst go"><li>Model checked against all three independent test modes, not only the one it was fit to.</li><li>Mesh convergence quantified (0.21% from medium to fine) before trusting peak stresses.</li><li>Reaction force rose nonlinearly with displacement, confirming a hyperelastic model was necessary; a linear material would have mispredicted the load.</li></ul>
               <ul class="lst warn" style="margin-top:8px"><li>2D plane-strain idealization; a 3D segment would capture end effects at the corners.</li><li>No thermal or time-dependent (viscoelastic) behavior, which a hot, long-life gasket would see.</li></ul>
             </div>
           </div>
@@ -202,6 +211,7 @@
           <div>
             <div class="blk"><h4>Results</h4><div class="statline">
               <div class="stat"><span class="v lit">11.22 / 2.11%</span><span class="l">Max thinning, 8.8 vs 1.25 kN</span></div>
+              <div class="stat"><span class="v">12.74 / 1.34 mm</span><span class="l">Blank elongation, 8.8 vs 1.25 kN</span></div>
               <div class="stat"><span class="v">3161 / 648 N</span><span class="l">Peak punch force</span></div>
               <div class="stat"><span class="v">70 mm</span><span class="l">Punch stroke, both cases</span></div></div>
               <div class="fstrip">
@@ -252,7 +262,7 @@
                 <figure class="shot"><img src="assets/walker/drawing.png" alt="GD&T detail drawing of a bracket" loading="lazy" data-tag="GD&amp;T drawing" data-cap="A released detail drawing per ASME Y14.5, with datums, position tolerances, and inspection callouts."><figcaption class="cap"><span>GD&amp;T drawing</span><span>ASME Y14.5</span></figcaption></figure>
               </div></div>
             <div class="blk"><h4>Validation and limits</h4>
-              <ul class="lst go"><li>The four other members carry healthy margin (FOS roughly 1.7 to 19); the hand calc agreed with the FEA on the critical one.</li></ul>
+              <ul class="lst go"><li>The four other members carry healthy margin (FOS roughly 1.7 to 19), and the hand calc agreed with the FEA on the critical one.</li><li>Even the upper frame is comfortable seated (FOS over 200); only the bounding standing-handle case drives it to the limit, which is exactly why that case is the design driver.</li></ul>
               <ul class="lst warn" style="margin-top:8px"><li><b>The upper frame is not acceptable as drawn:</b> a factor of safety of 1.00 leaves no margin, so it needs a gusset or larger section, or a published weight limit, before use.</li><li>Static analysis only; a real fall is dynamic and would apply an impact factor above the static load.</li></ul>
             </div>
           </div>
@@ -264,39 +274,42 @@
     <article class="proj" id="p5">
       <div class="proj-top">
         <div>
-          <div class="idx"><b>05</b> / Fluid mechanics · pump sizing</div>
+          <div class="idx"><b>05</b> / Fluid mechanics · hydraulic system design</div>
           <h3>Centrifugal Pump and Piping System</h3>
-          <p class="outcome">A hydraulic press needed oil pumped from a tank, through fittings and a valve, at 30 to 40 GPM. I built the total-dynamic-head budget from first principles, summing the pressure, elevation, friction, fitting, and kinetic heads to <b>36.0 m (118 ft)</b>, verified both lines were laminar before choosing the friction model, and selected a stock 3 hp pump whose curve clears the duty with margin.</p>
-          <div class="metric"><span class="v" data-count="36.0" data-dec="1">36.0<span class="u"> m</span></span><span class="l">Total dynamic head the pump must supply, built from first principles.</span></div>
-          <div class="tags"><span class="tag">Fluid mechanics</span><span class="tag">Darcy-Weisbach</span><span class="tag">Head budget</span><span class="tag">Reynolds regime</span><span class="tag">Pump selection</span><span class="tag">MATLAB</span></div>
+          <p class="outcome">A hydraulic press needed oil delivered at 30 to 40 GPM and 50 psia, and the task was to design the whole loop around it: size the pump, size the return line, decide whether the oil could drain back to the tank under gravity alone, specify a throttling valve, and keep the cost reasonable. I built the head budget term by term to a <b>total dynamic head of 36.0 m (118 ft)</b> and chose a 3 hp pump whose curve clears it, showed the return runs on gravity with no second pump, and sized a globe valve to the exact flow coefficient the system needs.</p>
+          <div class="metric"><span class="v" data-count="36.0" data-dec="1">36.0<span class="u"> m</span></span><span class="l">Total dynamic head the pump must supply, summed term by term.</span></div>
+          <div class="tags"><span class="tag">Energy balance</span><span class="tag">Darcy-Weisbach</span><span class="tag">Reynolds regime</span><span class="tag">Valve sizing (Cv)</span><span class="tag">Iterative MATLAB</span><span class="tag">Pump selection</span></div>
         </div>
         <div class="shotwrap"><figure class="shot"><img src="assets/v3/pump-system.svg" alt="Schematic of the pump and piping system from supply tank to hydraulic press" loading="lazy" data-tag="System overview" data-cap="The system I sized: supply tank, 3 hp pump, a discharge line with three elbows and a globe valve into the press at 50 psia, and a 2 in gravity return that needs no second pump."><figcaption class="cap"><span>System overview</span><span>Schematic</span></figcaption></figure></div>
       </div>
       <details class="more"><summary class="more-t"><span class="ic" aria-hidden="true"></span><span class="o">Show full breakdown</span><span class="c">Hide breakdown</span></summary>
         <div class="more-in"><div class="dgrid">
           <div>
-            <div class="blk"><h4>The problem</h4><p>The pump can only be specified once you know the total head it must overcome, and that number is the sum of several effects, most of all the pressurized press at the outlet. Get the flow regime wrong and the friction term is wrong, and the whole selection is off.</p></div>
-            <div class="blk"><h4>Approach</h4><p>I wrote the extended energy equation between the supply tank and the press and added every contribution: the pressure rise into the press, the elevation change, friction in the lines, the fitting losses, and the kinetic head. Before applying friction I checked the Reynolds number in both lines, found them below 4000, and used the laminar relation f = 64/Re rather than a turbulent correlation.</p>
-              <div class="eq"><div class="tex" data-tex="H_{\text{pump}} = \Delta z + \dfrac{\Delta p}{\rho g} + h_f + h_{\text{minor}} + \Delta\!\left(\dfrac{V^2}{2g}\right)"></div><small>Total dynamic head, with the laminar friction factor f = 64/Re used after the regime check.</small></div>
+            <div class="blk"><h4>The problem</h4><p>A press that needs a steady 30 to 40 GPM at 50 psia sets off a chain of decisions. The pump can only be chosen once you know the total head it must overcome, and that head turns out to be dominated by the pressurized press, not the plumbing. The return side is a separate question: can gravity carry the oil back to the tank, or is a second pump required? And the valve has to hold the flow in band without throwing away pressure. Get the flow regime wrong and every friction term, and the whole selection, goes with it.</p></div>
+            <div class="blk"><h4>Approach</h4><p>I wrote a mechanical energy balance between the supply tank and the press and summed every head: the 50 psia pressure rise, the elevation change, pipe friction from Darcy-Weisbach, fitting losses from tabulated K-factors, and the kinetic term. I checked the Reynolds number in both lines first, found them below 4000, and used the laminar relation f = 64/Re instead of a turbulent correlation. For the return line I wrote a MATLAB loop that sweeps pipe diameter, solving for velocity, Reynolds number, friction factor, and head loss, then a new velocity from Torricelli's equation under a relaxation factor, iterating until the velocity settled within 1 percent. The valve I sized from the real discharge velocity and loss coefficient rather than an assumed pressure drop.</p>
+              <div class="eq"><div class="tex" data-tex="H_{\text{pump}} = \dfrac{\Delta p}{\rho g} + \Delta z + h_f + h_{\text{minor}} + \Delta\!\left(\dfrac{V^2}{2g}\right)"></div><small>Total dynamic head, with f = 64/Re used after the laminar regime check. The 50 psia pressure head alone is 28.5 m of the 36.0 m total.</small></div>
+              <div class="eq"><div class="tex" data-tex="C_v = Q\sqrt{\dfrac{\text{SG}}{\Delta p}} \;\;\Rightarrow\;\; C_v \approx 29"></div><small>Valve flow coefficient from the 6.3 ft/s discharge velocity and a globe-valve K of 7.1, a 1.65 psi drop at 40 GPM.</small></div>
             </div>
             <div class="blk"><h4>Key tradeoffs</h4><ul class="lst">
-              <li><b>Laminar 64/Re over a turbulent correlation</b>: the regime check came first, so the friction head is trustworthy.</li>
-              <li><b>Size to 40 GPM at the top of the range</b>: clearing the head there guarantees flow across the whole 30 to 40 GPM duty.</li>
-              <li><b>Stock 3 hp pump over a custom unit</b>: a catalog pump meets the duty point with margin and is easy to source.</li>
+              <li><b>Gravity return over a pumped return</b>: any line 2 in or larger drains under the 8 ft of available head, so a second pump, its controls, and its maintenance all come off the bill.</li>
+              <li><b>2 in return over a larger pipe</b>: 2 in is the smallest size that still drains by gravity, which holds down pipe cost; the tradeoff is that the margin thins as the tank empties.</li>
+              <li><b>Laminar f = 64/Re over a turbulent correlation</b>: the regime check came first, so the friction head is trustworthy.</li>
+              <li><b>Catalog pump and Cv-matched valve over custom parts</b>: both meet the duty point with margin and are easy to source.</li>
             </ul></div>
           </div>
           <div>
             <div class="blk"><h4>Results</h4><div class="statline">
               <div class="stat"><span class="v lit">36.0 m</span><span class="l">Total dynamic head (118 ft)</span></div>
-              <div class="stat"><span class="v">3 hp</span><span class="l">Pump selected, 36.6 m at 40 GPM</span></div>
-              <div class="stat"><span class="v">Re &lt; 4000</span><span class="l">Laminar, both lines</span></div></div>
+              <div class="stat"><span class="v">3 hp</span><span class="l">Pump clears 36.6 m at 40 GPM</span></div>
+              <div class="stat"><span class="v">2 in</span><span class="l">Return drains by gravity, no pump</span></div>
+              <div class="stat"><span class="v">Cv 29</span><span class="l">Globe valve, exact catalog match</span></div></div>
               <div class="fstrip">
-                <figure class="shot"><img src="assets/pump/tdh.png" alt="Total dynamic head budget by contribution" loading="lazy" data-tag="Head budget" data-cap="The total-dynamic-head budget by source: the pressure term dominates at 28.5 m of the 36.0 m total, and the selected pump delivers 36.6 m at 40 GPM."><figcaption class="cap"><span>Head budget</span><span>118 ft</span></figcaption></figure>
-                <figure class="shot"><img src="assets/pump/return.png" alt="Gravity flow capacity versus pipe size" loading="lazy" data-tag="Return line" data-cap="Return-line sizing: any pipe 2 in or larger feeds the duty by gravity, so no second pump is needed."><figcaption class="cap"><span>Return line</span><span>Gravity-fed</span></figcaption></figure>
+                <figure class="shot"><img src="assets/pump/tdh.png" alt="Total dynamic head budget by contribution" loading="lazy" data-tag="Head budget" data-cap="The total-dynamic-head budget by source: the pressure term alone is 28.5 m of the 36.0 m total, and the selected pump delivers 36.6 m at 40 GPM."><figcaption class="cap"><span>Head budget</span><span>118 ft</span></figcaption></figure>
+                <figure class="shot"><img src="assets/pump/return.png" alt="Gravity flow capacity versus return pipe size" loading="lazy" data-tag="Return line" data-cap="Return-line sweep: every pipe 2 in or larger loses less than the 8 ft of available head, so the oil drains back to the tank by gravity, no second pump needed."><figcaption class="cap"><span>Return line</span><span>Gravity-fed</span></figcaption></figure>
               </div></div>
             <div class="blk"><h4>Validation and limits</h4>
-              <ul class="lst go"><li>The selected pump was checked against the manufacturer's published head-flow curve: 36.6 m at 40 GPM clears the 36.0 m requirement.</li></ul>
-              <ul class="lst warn" style="margin-top:8px"><li>Steady-state only; startup transients and water hammer on valve closure are not captured.</li><li>Fitting losses use handbook K-factors, and the suction-side cavitation margin (NPSH) is the next thing to check before purchase.</li></ul>
+              <ul class="lst go"><li>Pump checked against the manufacturer's published curve: 36.6 m at 40 GPM clears the 36.0 m requirement.</li><li>Return-line sweep confirmed every diameter 2 in and up loses less than the 8 ft of available head, so it drains by gravity.</li><li>Valve coefficient matched to a real catalog part, a Honeywell globe valve at Cv 29, integrated into the 2 in line with reducing bushings.</li></ul>
+              <ul class="lst warn" style="margin-top:8px"><li>Steady-state only; startup transients and water hammer on valve closure are not captured.</li><li>The 2 in return sits close to the available-head limit, so the gravity margin thins as the tank drains, and a few minor losses were neglected, which makes the real loss slightly higher.</li><li>Suction-side cavitation margin (NPSH) is the next check before purchase.</li></ul>
             </div>
           </div>
         </div></div>
@@ -394,13 +407,13 @@
   <div class="wrap"><div class="about-grid">
     <div class="shead" style="margin:0">
       <span class="eyebrow">About</span>
-      <h2>Hand calc, then simulation, then test</h2>
-      <p>M.S. Mechanical Engineering candidate at the University of Florida, GPA 4.00, December 2026, targeting aerospace and defense, plus automotive and any serious hardware team.</p>
+      <h2>Close to the hardware, always learning</h2>
+      <p>M.S. Mechanical Engineering candidate at the University of Florida, graduating December 2026. I'm drawn to roles where engineers stay close to the hardware, in mechanical design, structural and FEA analysis, test engineering, and manufacturing, with a particular pull toward aerospace, defense, energy, and automotive.</p>
     </div>
     <div>
       <div class="about-copy">
-        <p>My work spans nonlinear and contact FEA in Abaqus, structural analysis in ANSYS, thermal and hydraulic system sizing, design in SolidWorks and Fusion 360 with <b>GD&amp;T per ASME Y14.5</b>, and hands-on builds, from manual machining to <b>0.001 in</b> through instrumented bench validation.</p>
-        <p>I work from hand calculation to simulation to test, name the tradeoffs behind every decision, and report results with their limitations, including the ones that flag a redesign. As a <b>U.S. Citizen and clearance eligible</b>, I am ready for cleared aerospace and defense programs.</p>
+        <p>My work spans nonlinear and contact FEA in Abaqus, structural analysis in ANSYS, thermal and hydraulic system design, and CAD in SolidWorks and Fusion 360 with <b>GD&amp;T to ASME Y14.5</b>. What I like most is that it ends at real hardware, machining parts to <b>0.001 in</b> and validating them on an instrumented bench.</p>
+        <p>I take a design from early sizing through simulation and into testing, weigh the tradeoffs behind each decision, and remain candid about what the results prove, including when they point to a redesign. As a <b>U.S. Citizen and clearance eligible</b>, I am ready for cleared aerospace and defense work.</p>
       </div>
       <div class="skills">
         <div class="srow"><div class="h">Design and CAD</div><div class="b">SolidWorks, Fusion 360, DFM/DFA, tolerance analysis, BOM development, Pugh-chart selection</div></div>
@@ -450,6 +463,6 @@
 
 <script src="assets/js/motion.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

@@ -15,6 +15,20 @@ toggle.addEventListener('click',function(){ var o=links.classList.toggle('open')
 links.addEventListener('click',function(e){ if(e.target.closest('a')){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); } });
 function ns(){ nav.classList.toggle('scrolled', scrollY>12); } ns(); addEventListener('scroll',ns,{passive:true});
 
+/* theme toggle (default dark; light persisted in localStorage) */
+var themeBtn=document.getElementById('themeToggle');
+function syncThemeBtn(){ var light=document.documentElement.getAttribute('data-theme')==='light'; if(!themeBtn) return;
+  themeBtn.setAttribute('aria-pressed', light?'true':'false');
+  themeBtn.setAttribute('aria-label', light?'Switch to dark mode':'Switch to light mode'); }
+syncThemeBtn();
+if(themeBtn){ themeBtn.addEventListener('click',function(){
+  var light=document.documentElement.getAttribute('data-theme')==='light';
+  if(light){ document.documentElement.removeAttribute('data-theme'); } else { document.documentElement.setAttribute('data-theme','light'); }
+  try{ localStorage.setItem('theme', light?'dark':'light'); }catch(e){}
+  syncThemeBtn();
+  document.dispatchEvent(new Event('themechange'));
+}); }
+
 /* progress */
 var prog=document.getElementById('progress');
 if(M&&M.scroll){ M.scroll(function(p){ prog.style.transform='scaleX('+p+')'; }); }
@@ -25,7 +39,10 @@ else addEventListener('scroll',function(){ var h=document.documentElement,m=h.sc
   var cv=document.getElementById('flow'); if(!cv) return;
   var ctx=cv.getContext('2d'), w,h,dpr,parts,raf,t=0, baseV=1.4, gust=0, lastScroll=window.scrollY;
   var mouse={x:-9999,y:-9999,on:false}, heroEl=document.querySelector('.hero h1'), ob=null;
-  function size(){ dpr=Math.min(devicePixelRatio||1,2); w=cv.width=innerWidth*dpr; h=cv.height=innerHeight*dpr; cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px'; ctx.fillStyle='#0A0E1A'; ctx.fillRect(0,0,w,h); }
+  function TC(){ var L=document.documentElement.getAttribute('data-theme')==='light';
+    return L ? { bg:'#EEF2F8', fade:'rgba(238,242,248,0.07)', c0:[12,130,118], c1:[200,46,142], a0:0.34, a1:0.5, stat:'rgba(40,70,140,0.13)' }
+             : { bg:'#0A0E1A', fade:'rgba(10,14,26,0.06)', c0:[57,215,200], c1:[255,92,192], a0:0.30, a1:0.4, stat:'rgba(120,150,230,0.13)' }; }
+  function size(){ dpr=Math.min(devicePixelRatio||1,2); w=cv.width=innerWidth*dpr; h=cv.height=innerHeight*dpr; cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px'; ctx.fillStyle=TC().bg; ctx.fillRect(0,0,w,h); }
   function seed(){ var n=Math.min(460, Math.round(innerWidth*innerHeight/3200)); parts=[]; for(var i=0;i<n;i++) parts.push(mk(true)); }
   function mk(any){ return { x:any?Math.random()*w:Math.random()*w*0.12, y:Math.random()*h, life:Math.random()*260+70 }; }
   function field(x,y){ var s=0.0014/dpr; return (Math.sin(x*s+t*0.26)*Math.cos(y*s*1.25-t*0.16) + 0.55*Math.sin(y*s*0.6+t*0.11) + 0.30*Math.cos((x+y)*s*0.5-t*0.09))*1.4 + 0.12; }
@@ -33,23 +50,24 @@ else addEventListener('scroll',function(){ var h=document.documentElement,m=h.sc
   function repel(px,py){ if(!ob) return null; var inX=px>ob.x&&px<ob.x+ob.w, inY=py>ob.y&&py<ob.y+ob.h; if(inX&&inY){ var tT=py-ob.y, tB=(ob.y+ob.h)-py; return {fx:0.4*dpr, fy:(tT<tB?-1:1)*3.2*dpr}; } var cx=Math.max(ob.x,Math.min(px,ob.x+ob.w)), cy=Math.max(ob.y,Math.min(py,ob.y+ob.h)); var dx=px-cx, dy=py-cy, d=Math.hypot(dx,dy), m=64*dpr; if(d<m){ var f=(1-d/m)*2.4*dpr; return {fx:dx/(d+1)*f, fy:dy/(d+1)*f}; } return null; }
   function frame(){
     t+=0.01; var sv=Math.abs(window.scrollY-lastScroll); lastScroll=window.scrollY; gust=Math.min(gust*0.9+sv*0.045,3);
-    updateObstacle(); ctx.fillStyle='rgba(10,14,26,0.06)'; ctx.fillRect(0,0,w,h);
+    updateObstacle(); var tc=TC(); ctx.fillStyle=tc.fade; ctx.fillRect(0,0,w,h);
     var sp0=(baseV+gust)*dpr;
     for(var i=0;i<parts.length;i++){
       var p=parts[i], a=field(p.x,p.y), vx=Math.cos(a)*sp0, vy=Math.sin(a)*sp0;
       if(mouse.on){ var mdx=p.x-mouse.x*dpr, mdy=p.y-mouse.y*dpr, md=Math.hypot(mdx,mdy), R=150*dpr; if(md<R){ var mf=(1-md/R)*3*dpr; vx+=mdx/(md+1)*mf; vy+=mdy/(md+1)*mf; } }
       var rp=repel(p.x,p.y); if(rp){ vx+=rp.fx; vy+=rp.fy; }
       var speed=Math.hypot(vx,vy)/dpr, mix=Math.max(0,Math.min(1,(speed-baseV)/4));
-      var r=Math.round(57+(255-57)*mix), g=Math.round(215+(92-215)*mix), b=Math.round(200+(192-200)*mix);
-      ctx.strokeStyle='rgba('+r+','+g+','+b+','+(0.3+0.4*mix)+')'; ctx.lineWidth=(1.0+0.6*mix)*dpr;
+      var r=Math.round(tc.c0[0]+(tc.c1[0]-tc.c0[0])*mix), g=Math.round(tc.c0[1]+(tc.c1[1]-tc.c0[1])*mix), b=Math.round(tc.c0[2]+(tc.c1[2]-tc.c0[2])*mix);
+      ctx.strokeStyle='rgba('+r+','+g+','+b+','+(tc.a0+(tc.a1-tc.a0)*mix)+')'; ctx.lineWidth=(1.0+0.6*mix)*dpr;
       ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(p.x+vx,p.y+vy); ctx.stroke();
       p.x+=vx; p.y+=vy; p.life--;
       if(p.life<0||p.x<-2||p.x>w+2||p.y<-2||p.y>h+2) parts[i]=mk(false);
     }
     raf=requestAnimationFrame(frame);
   }
-  function staticField(){ ctx.fillStyle='#0A0E1A'; ctx.fillRect(0,0,w,h); for(var s=0;s<70;s++){ var x=Math.random()*w, y=Math.random()*h; ctx.strokeStyle='rgba(120,150,230,0.13)'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x,y); for(var k=0;k<70;k++){ var a=field(x,y); x+=Math.cos(a)*4; y+=Math.sin(a)*4; ctx.lineTo(x,y); } ctx.stroke(); } }
+  function staticField(){ var tc=TC(); ctx.fillStyle=tc.bg; ctx.fillRect(0,0,w,h); for(var s=0;s<70;s++){ var x=Math.random()*w, y=Math.random()*h; ctx.strokeStyle=tc.stat; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(x,y); for(var k=0;k<70;k++){ var a=field(x,y); x+=Math.cos(a)*4; y+=Math.sin(a)*4; ctx.lineTo(x,y); } ctx.stroke(); } }
   size(); seed(); if(reduced) staticField(); else raf=requestAnimationFrame(frame);
+  document.addEventListener('themechange',function(){ size(); if(reduced) staticField(); });
   var rt; addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ size(); seed(); if(reduced) staticField(); },200); },{passive:true});
   if(!reduced){ addEventListener('mousemove',function(e){ mouse.x=e.clientX; mouse.y=e.clientY; mouse.on=true; },{passive:true}); addEventListener('mouseout',function(){ mouse.on=false; }); document.addEventListener('visibilitychange',function(){ if(document.hidden) cancelAnimationFrame(raf); else { lastScroll=window.scrollY; raf=requestAnimationFrame(frame); } }); }
 })();

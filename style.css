@@ -237,3 +237,35 @@ footer a:hover{ color:var(--accent); }
 }
 @keyframes up{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
 @media (prefers-reduced-motion:reduce){ *,*::before,*::after{ animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
+/* ============================================================
+   LIGHT / DARK THEME  (default = dark; light via data-theme)
+   ============================================================ */
+body{ transition:background-color .3s ease, color .3s ease; }
+
+/* theme toggle button + right-side nav cluster */
+.nav-right{ display:flex; align-items:center; gap:16px; }
+#themeToggle{ width:40px; height:40px; flex-shrink:0; display:grid; place-items:center;
+  background:none; border:1px solid var(--line-2); border-radius:9px; cursor:pointer;
+  color:var(--ink-2); transition:color .2s var(--ease), border-color .2s var(--ease); }
+#themeToggle:hover{ color:var(--accent); border-color:var(--accent); }
+#themeToggle svg{ width:18px; height:18px; display:block; }
+#themeToggle .moon{ display:none; }
+html[data-theme="light"] #themeToggle .sun{ display:none; }
+html[data-theme="light"] #themeToggle .moon{ display:block; }
+
+/* light palette */
+html[data-theme="light"]{
+  --bg:#EEF2F8; --bg-2:#FFFFFF; --panel:#FFFFFF; --panel-2:#F3F6FB;
+  --ink:#141B2D; --ink-2:#46506A; --ink-3:#6C7790;
+  --line:rgba(22,42,92,.13); --line-2:rgba(22,42,92,.20);
+  --accent:#0C8276; --accent-deep:#0A6B61; --accent-soft:rgba(12,130,118,.12);
+  --go:#0B8F63; --magenta:#C42E8E;
+}
+html[data-theme="light"] .nav.scrolled{ background:rgba(255,255,255,.82); }
+html[data-theme="light"] .scrim{ background:radial-gradient(135% 110% at 50% -10%, transparent 62%, rgba(176,194,226,.30)); }
+html[data-theme="light"] .shot{ background:#fff; box-shadow:0 24px 50px -40px rgba(22,42,92,.40); }
+html[data-theme="light"] .snap{ background:rgba(22,42,92,.02); }
+html[data-theme="light"] ::selection{ color:#fff; }
+html[data-theme="light"] .nav-cta:hover{ color:#fff !important; }
+html[data-theme="light"] .nav-cta:hover{ box-shadow:0 0 20px rgba(12,130,118,.28); }
